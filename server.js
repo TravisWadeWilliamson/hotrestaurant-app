@@ -16,8 +16,12 @@ app.get('/reservations', function (request, response) {
 app.get('/', function (request, response) {
     response.sendFile(path.join(__dirname, 'index.html'));
 })
-
-
+app.get('/style.css', function (request, response) {
+    response.sendFile(path.join(__dirname, 'style.css'));
+})
+app.get('/style2.css', function (request, response) {
+    response.sendFile(path.join(__dirname, 'style2.css'));
+})
 app.get('/api/tables', function(request, response) {
     return response.json(tables)
 })
